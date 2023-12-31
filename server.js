@@ -21,6 +21,10 @@ const studentSchema = mongoose.Schema({
         type:String,
         required:true
     },
+    student_email:{
+        type:String,
+        required:true
+    },
     student_contact:{
         type:Number,
         required:true
@@ -38,7 +42,16 @@ app.get('/',((req,res)=>{
 }))
 
 app.post('/id/home',(req,res)=>{
-   
+   let studentReg = new studentModel({
+    student_name:req.body.student,
+    student_semester:req.body.semester,
+    student_email:req.body.email,
+    student_contact:req.body.contact
+   })
+   studentReg.save((e)=>{
+    res.send("There is some trouble with Registring your Account. Please Try Again Later")
+   });
+   res.send("Registration Successful!")
 })
 app.listen(port,()=>{
     console.log(`Listening from ${port}`)
