@@ -10,11 +10,11 @@ app.get('/',((req,res)=>{
 
 app.post('/home',(req,res)=>{
     res.json({
-        name:req.body.name,
-        semester:req.body.semester,
-        email:req.body.email,
-        contact:req.body.contact,
-        rollNo:req.body.rollNo
+        "name":req.body.name,
+        "semester":req.body.semester,
+        "email":req.body.email,
+        "contact":req.body.contact,
+        "rollNo":req.body.rollNo
     })
 })
 app.listen(port,()=>{
