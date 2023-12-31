@@ -48,9 +48,9 @@ app.post('/id/home',(req,res)=>{
     student_semester:   req.body.semester,
     student_email   :   req.body.email,
     student_contact :   req.body.contact,
-    student_contact:    req.body.rollNumber
+    student_rollNumber:    req.body.rollNumber
    })
-   
+
    studentReg.save()
         .then(() => {
             console.log("Data saved successfully");
