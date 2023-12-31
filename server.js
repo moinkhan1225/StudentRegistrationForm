@@ -12,6 +12,27 @@ mongoose.connect("mongodb+srv://admin:moinkhan456@cluster0.dxjcj.mongodb.net/?re
 .then(console.log("MongoDB Connect"))
 .catch((e)=>console.log(`MongoDB not Connected Reason:${e}`))
 
+const studentSchema = mongoose.Schema({
+    student_name:{
+        type:String,
+        required:true
+    },
+    student_semester:{
+        type:String,
+        required:true
+    },
+    student_contact:{
+        type:Number,
+        required:true
+    },
+    student_rollNumber:{
+        type:Number,
+        required:true
+    }
+})
+
+let studentModel = mongoose.Model('studentModel',studentSchema);
+
 app.get('/',((req,res)=>{
     res.sendFile(process.cwd() + "/index.html")
 }))
