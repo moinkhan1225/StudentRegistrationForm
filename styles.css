@@ -1,0 +1,25 @@
+
+
+body{
+background-color: aliceblue;
+}
+.heading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+container{
+    display: grid;
+    grid-template-rows: auto; 
+    grid-template-columns: 1fr;
+    place-items: center;
+    border: 1px solid black;
+    height: 55vh;
+    
+}
+form{
+    display: flex;
+    flex-direction: column;
+    font-size: larger;
+    gap:0.5rem;
+}
