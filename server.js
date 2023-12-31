@@ -44,14 +44,22 @@ app.get('/',((req,res)=>{
 
 app.post('/id/home',(req,res)=>{
    const studentReg = new studentModel({
-    student_name:req.body.student,
-    student_semester:req.body.semester,
-    student_email:req.body.email,
-    student_contact:req.body.contact,
-    student_contact:req.body.rollNumber
+    student_name    :   req.body.student,
+    student_semester:   req.body.semester,
+    student_email   :   req.body.email,
+    student_contact :   req.body.contact,
+    student_contact:    req.body.rollNumber
    })
-   studentReg.save();
-   res.send("Registration Successful!")
+   
+   studentReg.save()
+        .then(() => {
+            console.log("Data saved successfully");
+            res.send("Registration Successful!");
+        })
+        .catch((error) => {
+            console.log(`Error saving data: ${error}`);
+            res.status(500).send("Internal Server Error");
+        });
 })
 app.listen(port,()=>{
     console.log(`Listening from ${port}`)
