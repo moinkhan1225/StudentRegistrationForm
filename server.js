@@ -8,6 +8,9 @@ const port = process.env.PORT || 3000;
 app.use('/public', express.static(`${process.cwd()}/public`));
 app.use(bodyparser.urlencoded({extended:false}));
 
+mongoose.connect("mongodb+srv://admin:moinkhan@456@cluster0.dxjcj.mongodb.net/?retryWrites=true&w=majority")
+.then(console.log("MongoDB Connect"))
+.catch((e)=>console.log(`MongoDB not Connected Reason:${e}`))
 
 app.get('/',((req,res)=>{
     res.sendFile(process.cwd() + "/index.html")
