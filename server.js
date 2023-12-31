@@ -43,7 +43,7 @@ app.get('/',((req,res)=>{
 }))
 
 app.post('/id/home',(req,res)=>{
-   let studentReg = new studentModel({
+   const studentReg = new studentModel({
     student_name:req.body.student,
     student_semester:req.body.semester,
     student_email:req.body.email,
