@@ -7,28 +7,28 @@
     <link
     rel="stylesheet"
     href="/public/styles.css"
-    type="/text/css"
+    type="text/css"
     />
 
 </head>
 <body>
    <h1 class="heading">Register Your Account</h1>
     <container>
-            <form>
+            <form action="/home" method="POST">
                 <label for="name_input">Student Name</label>
-                <input id="name_input" type="text" required/>
+                <input id="name_input" type="text" name="name" required/>
 
                 <label for="semester_input">Student Semester</label>
-                <input id="semester_input" type="text" required/>
+                <input id="semester_input" type="text" name="semester" required/>
 
                 <label for="email_input">Student Email</label>
-                <input id="email_input" type="email" required/>
+                <input id="email_input" type="email" name="email" required/>
 
                 <label for="contact_input">Student Contact</label>
-                <input id="contact_input" type="tel" required/>
+                <input id="contact_input" type="tel" name="contact" required/>
 
                 <label for="rollno_input">Student Roll Number</label>
-                <input id="rollno_input" type="number" required/>
+                <input id="rollno_input" type="number" name="rollNumber" required/>
 
                 <input type="submit"/>
         </form>
