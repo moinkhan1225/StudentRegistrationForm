@@ -48,9 +48,7 @@ app.post('/id/home',(req,res)=>{
     student_email:req.body.email,
     student_contact:req.body.contact
    })
-   studentReg.save((e)=>{
-    res.send("There is some trouble with Registring your Account. Please Try Again Later")
-   });
+   studentReg.save();
    res.send("Registration Successful!")
 })
 app.listen(port,()=>{
