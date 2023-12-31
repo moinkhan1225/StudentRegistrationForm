@@ -10,11 +10,12 @@ app.get('/',((req,res)=>{
 
 app.post('/id/home',(req,res)=>{
     res.json({
-        name:req.body.name,
+        name:"hii"
+        /*name:req.body.student,
         semester:req.body.semester,
         email:req.body.email,
         contact:req.body.contact,
-        rollNo:req.body.rollNo
+        rollNo:req.body.rollNo*/
     })
 })
 app.listen(port,()=>{
