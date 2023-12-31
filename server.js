@@ -31,20 +31,14 @@ const studentSchema = mongoose.Schema({
     }
 })
 
-let studentModel = mongoose.Model('studentModel',studentSchema);
+let studentModel = mongoose.model('studentModel',studentSchema);
 
 app.get('/',((req,res)=>{
     res.sendFile(process.cwd() + "/index.html")
 }))
 
 app.post('/id/home',(req,res)=>{
-    res.json({
-        name:req.body.student,
-        semester:req.body.semester,
-        email:req.body.email,
-        contact:req.body.contact,
-        rollNo:req.body.rollNo
-    })
+   
 })
 app.listen(port,()=>{
     console.log(`Listening from ${port}`)
