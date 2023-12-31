@@ -10,7 +10,7 @@ app.get('/',((req,res)=>{
 
 app.post('/id/home',(req,res)=>{
     res.json({
-        name:"hii"
+        name:req.body.student
         /*name:req.body.student,
         semester:req.body.semester,
         email:req.body.email,
