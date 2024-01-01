@@ -72,7 +72,7 @@ if(req.body.username=="admin" && req.body.password=="admin"){
 app.get('/adminpanel',((req,res)=>{
     //const searchName = req.body.search;
     const findStudentByName = studentModel.find({student_name:req.body.search});
-    console.log(findStudentByName);
+    res.json(findStudentByName)
 }))
 app.listen(port,()=>{
     console.log(`Listening from ${port}`)
