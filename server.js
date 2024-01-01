@@ -78,7 +78,11 @@ app.get('/adminpanel',((req,res)=>{
 
     studentModel.find({student_name: searchName})
         .then((foundStudents) => {
-            res.json(foundStudents);
+            if(!foundStudents){
+                res.send("Student Name Does not exist in our Database")
+            }else{
+                res.json(foundStudents);
+            }
         })
         .catch((error) => {
             console.log(`Error searching for students: ${error}`);
