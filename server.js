@@ -79,7 +79,7 @@ app.get('/adminpanel',((req,res)=>{
 
     studentModel.find({student_name: searchName})
         .then((foundStudents) => {
-            res.json(foundStudents);
+            res.send({foundStudents});
         })
         .catch((error) => {
             console.log(`Error searching for students: ${error}`);
