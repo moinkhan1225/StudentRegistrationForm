@@ -15,7 +15,7 @@ container{
     place-items: center;
     
 }
-section{
+section, admin{
     display: grid;
     grid-template-rows: auto; 
     grid-template-columns: 1fr;
