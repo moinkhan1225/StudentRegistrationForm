@@ -13,8 +13,7 @@ container{
     grid-template-rows: auto; 
     grid-template-columns: 1fr;
     place-items: center;
-    width: 80vw;
-    border: 1px solid black;
+    
 }
 section{
     display: grid;
@@ -30,4 +29,5 @@ form{
     flex-direction: column;
     font-size: larger;
     gap:0.5rem;
+    border: 1px solid black;
 }
