@@ -14,11 +14,13 @@ container,section{
     grid-template-columns: 1fr;
     place-items: center;
     border: 1px solid black;
-    height: 55vh;
-    
 }
 section{
-    padding-top: 10px;
+    display: grid;
+    grid-template-rows: auto; 
+    grid-template-columns: 1fr;
+    place-items: center;
+    border: 1px solid black; 
 }
 h2{
     text-align: center;
