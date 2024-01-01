@@ -63,7 +63,7 @@ app.post('/id/home',(req,res)=>{
 })
 
 app.post('/adminpanel',(req,res)=>{
-if(req.body.username=="admin" && req.body.pasword=="admin"){
+if(req.body.username=="admin" && req.body.password=="admin"){
     res.send("Login Sucessful!")
 }else{
     res.send("Invalid username or password")
