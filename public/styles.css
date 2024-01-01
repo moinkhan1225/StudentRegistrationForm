@@ -17,6 +17,9 @@ container,section{
     height: 55vh;
     
 }
+h2{
+    text-align: center;
+}
 form{
     display: flex;
     flex-direction: column;
