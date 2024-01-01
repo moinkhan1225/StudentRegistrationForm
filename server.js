@@ -70,11 +70,21 @@ if(req.body.username=="admin" && req.body.password=="admin"){
 }
 })
 app.get('/adminpanel',((req,res)=>{
-    //const searchName = req.body.search;
-    const findStudentByName = {
-        name:studentModel.find({student_name:req.body.search})
+    const searchName = req.body.search;
+
+    // Check if searchName is provided
+    if (!searchName) {
+        return res.status(400).json({ error: 'Search parameter is required' });
     }
-    res.json(findStudentByName)
+
+    studentModel.find({ student_name: searchName })
+        .then((foundStudents) => {
+            res.json(foundStudents);
+        })
+        .catch((error) => {
+            console.log(`Error searching for students: ${error}`);
+            res.status(500).json({ error: 'Internal Server Error' });
+        });
 }))
 app.listen(port,()=>{
     console.log(`Listening from ${port}`)
