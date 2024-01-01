@@ -70,7 +70,7 @@ if(req.body.username=="admin" && req.body.password=="admin"){
 }
 })
 app.get('/adminpanel',((req,res)=>{
-    const searchName = req.body.search;
+    const searchName = req.query.search;
 
     // Check if searchName is provided
     if (!searchName) {
