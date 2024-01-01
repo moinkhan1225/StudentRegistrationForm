@@ -71,15 +71,15 @@ if(req.body.username=="admin" && req.body.password=="admin"){
 })
 app.get('/adminpanel',((req,res)=>{
     const searchName = req.query.search;
-/*
+
     if (!searchName) {
-        return res.status(400).json({ error: 'Search parameter is required' });
-    }*/
+        return res.status(400).json({ error: 'Student Name Does not exist in our Database' });
+    }
 
     studentModel.find({student_name: searchName})
         .then((foundStudents) => {
             if(!foundStudents){
-                res.send("Student Name Does not exist in our Database")
+                res.send("")
             }else{
                 res.json(foundStudents);
             }
