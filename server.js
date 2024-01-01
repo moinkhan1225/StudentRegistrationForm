@@ -73,7 +73,7 @@ app.get('/adminpanel',((req,res)=>{
     const searchName = req.body.search;
 
     if (!searchName) {
-        return res.status(400).json({ error: 'Student Name Does not exist in our Database' });
+        return res.status(400).json({ error: 'Search parameter is required' });
     }
 
     studentModel.find({student_name: searchName})
