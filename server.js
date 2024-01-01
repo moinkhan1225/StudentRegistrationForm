@@ -70,9 +70,9 @@ if(req.body.username=="admin" && req.body.password=="admin"){
 }
 })
 app.get('/adminpanel',((req,res)=>{
-    const searchName = req.query.search;
+    const searchName = req.body.search;
 
-    if (searchName!=req.query.search) {
+    if (!searchName) {
         return res.status(400).json({ error: 'Student Name Does not exist in our Database' });
     }
 
