@@ -61,6 +61,14 @@ app.post('/id/home',(req,res)=>{
             res.status(500).send("Internal Server Error");
         });
 })
+
+app.post('/adminpanel',(req,res)=>{
+if(req.body.username=="admin" && req.body.pasword=="admin"){
+    res.send("Login Sucessful!")
+}else{
+    res.send("Invalid username or password")
+}
+})
 app.listen(port,()=>{
     console.log(`Listening from ${port}`)
 })
