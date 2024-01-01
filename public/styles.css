@@ -30,6 +30,5 @@ form{
     font-size: larger;
     gap:0.5rem;
     border: 1px solid black;
-    width: 100wv;
-    height: 100wv;
+    padding: 20px;
 }
