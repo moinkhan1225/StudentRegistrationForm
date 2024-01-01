@@ -74,12 +74,12 @@ app.get('/adminpanel',((req,res)=>{
     console.log(searchName);
 
     if (!searchName) {
-        return res.status(400).json({ error: 'Search parameter is required' });
+        return res.status(400).json({ error: 'Student Does not exist in our database' });
     }
 
     studentModel.find({student_name: searchName})
         .then((foundStudents) => {
-            res.send({foundStudents});
+            res.json(foundStudents);
         })
         .catch((error) => {
             console.log(`Error searching for students: ${error}`);
