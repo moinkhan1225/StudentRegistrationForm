@@ -69,6 +69,11 @@ if(req.body.username=="admin" && req.body.password=="admin"){
     res.send("Invalid username or password")
 }
 })
+app.get('/adminpanel',((req,res)=>{
+    //const searchName = req.body.search;
+    const findStudentByName = studentModel.find({student_name:req.body.search});
+    res.send(findStudentByName)
+}))
 app.listen(port,()=>{
     console.log(`Listening from ${port}`)
 })
