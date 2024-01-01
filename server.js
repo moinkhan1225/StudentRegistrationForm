@@ -64,7 +64,7 @@ app.post('/id/home',(req,res)=>{
 
 app.post('/adminpanel',(req,res)=>{
 if(req.body.username=="admin" && req.body.password=="admin"){
-    res.send("Login Sucessful!")
+      res.sendFile(process.cwd() + '/form.html')
 }else{
     res.send("Invalid username or password")
 }
