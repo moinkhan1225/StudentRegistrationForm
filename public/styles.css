@@ -20,7 +20,6 @@ section{
     grid-template-rows: auto; 
     grid-template-columns: 1fr;
     place-items: center;
-    border: 1px solid black; 
 }
 h2{
     text-align: center;
